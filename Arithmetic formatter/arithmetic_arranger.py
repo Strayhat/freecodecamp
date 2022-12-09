@@ -24,7 +24,7 @@ def arithmetic_arranger(problems, result=False):
         if len(alpha) > 4 or len(bravo) > 4:
             return "Error: Numbers cannot be more than four digits."
 
-        #calculating the rows +/- to get sumx
+        #calculating the rows +/- to get sum and append it
         if op == "+":
             sums.append(int(alpha) + int(bravo))
         else:
@@ -42,8 +42,8 @@ def arithmetic_arranger(problems, result=False):
             line.append('-' * width + "    ")
             # Store the string representation of the sum
             sum_str = f"{sums[-1]:>{width}}    "
+            #Then append it directly into sum_strs
             sum_strs.append(sum_str)
-           
         else:
             row_1.append(f"{alpha:>{width}}")
             row_2.append(f"{op}{bravo:>{width-1}}")
